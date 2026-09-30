@@ -1,0 +1,31 @@
+{
+  "name": "octolimb",
+  "version": "1.0.0",
+  "description": "MCP bridge that lets any MCP-capable agent drive a real Chrome browser via the OctoLimb extension",
+  "type": "module",
+  "bin": {
+    "octolimb": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "extension",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.5",
+    "ws": "^8.21.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/ws": "^8.5.13",
+    "typescript": "^6.0.3"
+  },
+  "license": "Apache-2.0"
+}

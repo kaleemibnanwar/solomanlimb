@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "OctoLimb Bridge",
+  "version": "1.0.0",
+  "description": "Connects this Chrome browser to the Octopus Studio OctoLimb MCP bridge, letting the Octopus Studio AI drive this browser.",
+  "permissions": ["scripting", "tabs", "activeTab", "alarms", "debugger"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_title": "OctoLimb Bridge",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  }
+}
