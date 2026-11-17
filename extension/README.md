@@ -1,8 +1,8 @@
 # OctoLimb Bridge (Chrome extension)
 
-> This folder is the browser half of the standalone **octolimb** project — see the [top-level README](../README.md) for install and client setup (Claude, Codex, Octopus Studio, …).
+> This folder is the browser half of the standalone **octolimb** project — see the [top-level README](../README.md) for install and client setup (Claude, Codex, Soloman Studio, …).
 
-Connects this Chrome browser to the octolimb host (the standalone MCP bridge in `src/`, or Octopus Studio's in-process bridge in `src/main/octolimb_bridge.ts`), letting any MCP-capable agent drive this
+Connects this Chrome browser to the octolimb host (the standalone MCP bridge in `src/`, or Soloman Studio's in-process bridge in `src/main/octolimb_bridge.ts`), letting any MCP-capable agent drive this
 browser. It implements the full nanobrowser (`browserbridge-extension`)
 action set — navigation, tabs, indexed element click/input, scrolling,
 dropdowns, key presses — plus two extras this architecture needs since
@@ -20,7 +20,7 @@ build step (plain JS, loaded as MV3 ES modules).
 2. Enable "Developer mode" (top-right toggle).
 3. Click "Load unpacked" and select this `octolimb/chrome-extension`
    folder.
-4. In Octopus Studio, make sure Settings → "Enable OctoLimb MCP Bridge" is
+4. In Soloman Studio, make sure Settings → "Enable OctoLimb MCP Bridge" is
    on. Its status line will show "Extension connected" once this
    extension's service worker connects.
 
@@ -48,7 +48,7 @@ Ported from nanobrowser's own methodology (studied from `browserbridge-extension
 ## How it reconnects
 
 The background service worker (`background.js`) keeps a WebSocket
-connection to `ws://127.0.0.1:32528` (Octopus Studio's in-process bridge)
+connection to `ws://127.0.0.1:32528` (Soloman Studio's in-process bridge)
 and reconnects automatically with backoff whenever it drops — after a
 Chrome restart (`chrome.runtime.onStartup`), after Studio is closed and
 reopened, or after any transient disconnect. A periodic `chrome.alarms`

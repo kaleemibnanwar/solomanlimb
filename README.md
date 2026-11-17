@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="extension/icons/icon-128.png" alt="OctoLimb" width="128" />
+<img src="extension/icons/icon-128.png" alt="Soloman Limb" width="128" />
 
-# OctoLimb
+# Soloman Limb
 
 ### MCP for any browser.
 
@@ -13,7 +13,7 @@ Give any MCP agent — Claude Code, Claude Desktop, OpenAI Codex, or your own �
 [![MCP](https://img.shields.io/badge/MCP-stdio%20%C2%B7%20HTTP-7c3aed)](#any-other-mcp-client)
 [![Chrome](https://img.shields.io/badge/Chrome-MV3-4285F4)](#load-the-extension)
 
-[What it is](#what-it-is) · [The Octopus family](#the-octopus-family) · [Install](#install) · [Use it with](#use-it-with) · [Tools](#tools) · [Security](#security)
+[What it is](#what-it-is) · [The Soloman ecosystem](#the-soloman-ecosystem) · [Install](#install) · [Use it with](#use-it-with) · [Tools](#tools) · [Security](#security)
 
 </div>
 
@@ -21,11 +21,11 @@ Give any MCP agent — Claude Code, Claude Desktop, OpenAI Codex, or your own �
 
 ## What it is
 
-OctoLimb turns a normal Chrome browser into a tool any MCP agent can call. Click, type, scroll, read the page, run JavaScript, and replay saved step-by-step "recipes" — all through your everyday, logged-in browser, not a headless copy.
+Soloman Limb turns a normal Chrome browser into a tool any MCP agent can call. Click, type, scroll, read the page, run JavaScript, and replay saved step-by-step "recipes" — all through your everyday, logged-in browser, not a headless copy.
 
 ```mermaid
 flowchart LR
-    A["Any MCP agent<br/>Claude · Codex · Studio"] -->|stdio or HTTP| B["OctoLimb host<br/>the MCP server"]
+    A["Any MCP agent<br/>Claude · Codex · Studio"] -->|stdio or HTTP| B["Soloman Limb host<br/>the MCP server"]
     B -->|WebSocket<br/>ws://127.0.0.1:32528| C["Chrome extension<br/>the browser actuator"]
     C -->|CDP + DOM indexer| D["Your real Chrome"]
 ```
@@ -41,17 +41,20 @@ It ships as two pieces, one package:
 
 ---
 
-## The Octopus family
+## The Soloman ecosystem
 
-OctoLimb is one arm of a bigger octopus, all on the same account:
+Soloman Limb is one arm of the Soloman ecosystem, all on the same account:
 
-| Repo | What it is | How OctoLimb fits |
+| Repo | What it is | How Soloman Limb fits |
 |---|---|---|
-| 🧠 [**Octopus Studio**](https://github.com/kaleemibnanwar/OctopusStudio) | Local-first AI workspace — research, docs, data, media, automation, MCP, and development | The **brain**. Studio ships OctoLimb's bridge in-process, so its agent gets a real browser with one toggle. OctoLimb is also a standard MCP server, so it plugs straight into Studio's Connections catalog. |
-| ✂️ [**Octo Cut**](https://github.com/kaleemibnanwar/octocut) | Self-driving, non-destructive desktop video editor | The **cut arm**. OctoLimb browses and gathers clips, images, and audio from the web; Octo Cut assembles them on the timeline. |
-| 🐙 **OctoLimb** | MCP for any browser | The **browser arm** — drives any website for any agent. |
+| 🧠 [**Soloman Studio**](https://github.com/kaleemibnanwar/Soloman-Studio) | Local-first AI workspace — research, docs, data, media, automation, MCP, and development | The **brain**. Studio ships Soloman Limb's bridge in-process, so its agent gets a real browser with one toggle. Soloman Limb is also a standard MCP server, so it plugs straight into Studio's Connections catalog. |
+| ✂️ [**Soloman Editor**](https://github.com/kaleemibnanwar/SolomanEditor) | Self-driving, non-destructive desktop video editor | The **cut arm**. Soloman Limb browses and gathers clips, images, and audio from the web; Soloman Editor assembles them on the timeline. |
+| 🐙 [**Soloman Manager**](https://github.com/kaleemibnanwar/Soloman-Manager) | Control center & package manager for MCP servers | The **tool shed**. Install, isolate, and supervise MCP servers — including Soloman Limb itself — and export 1-click client configs. |
+| 🌐 **Soloman Limb** | MCP for any browser | The **browser arm** — drives any website for any agent. |
 
-**The workflow:** Octopus Studio is the hub. Its agent calls OctoLimb to go out and *do things in the browser* — fetch a stock clip, pull a reference, fill a form, post an update — and feeds the results back into the project, or into Octo Cut for editing. OctoLimb is how the octopus reaches beyond your machine into the open web.
+**The workflow:** Soloman Studio is the hub. Its agent calls Soloman Limb to go out and *do things in the browser* — fetch a stock clip, pull a reference, fill a form, post an update — and feeds the results back into the project, or into Soloman Editor for editing. Soloman Limb is how the workspace reaches beyond your machine into the open web.
+
+> **Naming note:** the npm package and CLI command are `octolimb`, and the Chrome extension identifies itself as "OctoLimb Bridge" — those technical names are unchanged; Soloman Limb is the product.
 
 ---
 
@@ -69,7 +72,7 @@ The extension dials out to `ws://127.0.0.1:32528` and reconnects automatically w
 
 ```bash
 npm install -g octolimb      # from npm, or:
-# git clone https://github.com/kaleemibnanwar/octolimb.git && cd octolimb && npm install && npm run build && npm link
+# git clone https://github.com/kaleemibnanwar/solomanlimb.git && cd solomanlimb && npm install && npm run build && npm link
 ```
 
 Confirm it's on your path:
@@ -84,9 +87,9 @@ octolimb --help
 
 The host runs as a **stdio** server (default — the most universal) or a **Streamable HTTP** server. Both always start the WebSocket relay on `:32528` for the extension.
 
-### Octopus Studio
+### Soloman Studio
 
-Octopus Studio already ships an in-process OctoLimb bridge — **no standalone host needed.** Load the extension, then enable **Settings → "Enable OctoLimb MCP Bridge"**. Studio's agent can then drive a browser for tasks like "post this on Reddit" or "pull the latest pricing from that page."
+Soloman Studio already ships an in-process Soloman Limb bridge — **no standalone host needed.** Load the extension, then enable **Settings → "Enable OctoLimb MCP Bridge"**. Studio's agent can then drive a browser for tasks like "post this on Reddit" or "pull the latest pricing from that page."
 
 > **Don't run the standalone host at the same time** — Studio's bridge and this host both bind `:32527`/`:32528`. Pick one. (To run both, start the host with `--http-port 32529 --ws-port 32530`.)
 
