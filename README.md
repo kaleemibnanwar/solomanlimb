@@ -49,7 +49,7 @@ Soloman Limb is one arm of the Soloman ecosystem, all on the same account:
 |---|---|---|
 | 🧠 [**Soloman Studio**](https://github.com/kaleemibnanwar/Soloman-Studio) | Local-first AI workspace — research, docs, data, media, automation, MCP, and development | The **brain**. Studio ships Soloman Limb's bridge in-process, so its agent gets a real browser with one toggle. Soloman Limb is also a standard MCP server, so it plugs straight into Studio's Connections catalog. |
 | ✂️ [**Soloman Editor**](https://github.com/kaleemibnanwar/SolomanEditor) | Self-driving, non-destructive desktop video editor | The **cut arm**. Soloman Limb browses and gathers clips, images, and audio from the web; Soloman Editor assembles them on the timeline. |
-| 🐙 [**Soloman Manager**](https://github.com/kaleemibnanwar/Soloman-Manager) | Control center & package manager for MCP servers | The **tool shed**. Install, isolate, and supervise MCP servers — including Soloman Limb itself — and export 1-click client configs. |
+| ⚡ [**Soloman Manager**](https://github.com/kaleemibnanwar/Soloman-Manager) | Control center & package manager for MCP servers | The **tool shed**. Install, isolate, and supervise MCP servers — including Soloman Limb itself — and export 1-click client configs. |
 | 🌐 **Soloman Limb** | MCP for any browser | The **browser arm** — drives any website for any agent. |
 
 **The workflow:** Soloman Studio is the hub. Its agent calls Soloman Limb to go out and *do things in the browser* — fetch a stock clip, pull a reference, fill a form, post an update — and feeds the results back into the project, or into Soloman Editor for editing. Soloman Limb is how the workspace reaches beyond your machine into the open web.

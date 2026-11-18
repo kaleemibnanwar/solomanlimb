@@ -10,7 +10,7 @@ Studio (not the extension) drives every step: `read_page` (get an indexed
 snapshot of the page) and `execute_js` (run arbitrary JS in the page).
 See the tool list in `src/main/octolimb_bridge.ts`'s `OCTOLIMB_TOOLS`.
 
-This extension is intentionally **not** built or bundled by Octopus
+This extension is intentionally **not** built or bundled by Soloman Studio
 Studio — it's a separate, independently loaded Chrome extension with no
 build step (plain JS, loaded as MV3 ES modules).
 
